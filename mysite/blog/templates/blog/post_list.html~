@@ -1,23 +1,14 @@
-<html>
-    <head>
-        <title>Avashi's blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Avashi's Blog</a></h1>
-        </div>
+{% extends "blog/base.html" %}
 
-        <div>
-            <p>published: 18.09.2015, 17:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>This is sample post to frame this blog site. The contencts of interest will be uploded from the next section onwards. This is just nothing.</p>
-        </div>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h1>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Again a sample post. nothing to read in it...just trying to design the site</p>
+            <p>{{ post.text|linebreaks }}</p>
         </div>
-    </body>
-</html>
-
+    {% endfor %}
+{% endblock content %}
