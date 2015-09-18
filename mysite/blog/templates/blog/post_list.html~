@@ -3,8 +3,21 @@
         <title>Avashi's blog</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <div>
+            <h1><a href="">Avashi's Blog</a></h1>
+        </div>
+
+        <div>
+            <p>published: 18.09.2015, 17:14</p>
+            <h2><a href="">My first post</a></h2>
+            <p>This is sample post to frame this blog site. The contencts of interest will be uploded from the next section onwards. This is just nothing.</p>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">My second post</a></h2>
+            <p>Again a sample post. nothing to read in it...just trying to design the site</p>
+        </div>
     </body>
 </html>
 
